@@ -1,19 +1,21 @@
 #include <iostream>
 using namespace std;
 
-void swapNumbers(int& x, int& y) {
-    int temp = x;
-    x = y;
-    y = temp;
+int calculate_equation(int X, int N) {
+    int result = 0;
+    int power = 0;
+    while (N >= power) {
+        result += pow(X, power);
+        power += 2;
+    }
+    return result;
 }
 
 int main() {
-    int x, y;
-    cin >> x >> y;
+    int X, N;
+    cin >> X >> N;
 
-    swapNumbers(x, y);
-
-    cout << x << " " << y << endl;
+    cout << calculate_equation(X, N) << endl;
 
     return 0;
 }
