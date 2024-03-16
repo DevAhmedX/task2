@@ -1,29 +1,19 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-bool print(int n) {
-   if (n <= 1  )
-    {
-     return false ;
-   }
-
-       for (int i = 2; i <= sqrt(n); i++)
-        {
-        if(n % i == 0){
-            return false ;
-        }
-       }
-
-    return true;
+void swapNumbers(int& x, int& y) {
+    int temp = x;
+    x = y;
+    y = temp;
 }
 
 int main() {
-    long long n;
-    cin >> n;
-  if (print(n)) {
-        cout << "YES " << endl;
-    } else {
-        cout << "NO " << endl;
-    }
+    int x, y;
+    cin >> x >> y;
+
+    swapNumbers(x, y);
+
+    cout << x << " " << y << endl;
+
     return 0;
 }
