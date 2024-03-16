@@ -1,21 +1,25 @@
-#include <iostream>
+#include <bits/stdc++.h>
+
 using namespace std;
 
-int calculate_equation(int X, int N) {
-    int result = 0;
-    int power = 0;
-    while (N >= power) {
-        result += pow(X, power);
-        power += 2;
+void print_character(int N, char C) {
+    for (int i = 0; i < N; ++i) {
+        cout << C << " ";
     }
-    return result;
+    cout << endl;
 }
 
 int main() {
-    int X, N;
-    cin >> X >> N;
+    int T;
+    cin >> T;
 
-    cout << calculate_equation(X, N) << endl;
+    for (int t = 0; t < T; ++t) {
+        int N;
+        char C;
+        cin >> N >> C;
+
+        print_character(N, C);
+    }
 
     return 0;
 }
