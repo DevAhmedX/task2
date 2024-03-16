@@ -1,13 +1,20 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-int summation(long long num1, long long num2)
- {
-    return num1 + num2;
+void printNumbers(int N) {
+    for (int i = 1; i <= N; i++) {
+        cout << i;
+        if (i < N) {
+            cout << " ";
+        }
+    }
 }
 
 int main() {
-  long long num1 , num2 ;
-  cin >> num1 >> num2 ;
-  cout << summation(num1 , num2) ;
+    int N;
+    cin >> N;
+
+    printNumbers(N);
+
     return 0;
+}
